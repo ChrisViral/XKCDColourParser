@@ -253,34 +253,19 @@ public static class XKCDColours
     public static Color BlueBlue { get; } = new Color(0.1333333f, 0.2588235f, 0.7803922f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.05882353, 0.6078432, 0.5568628)
-    /// </summary>
-    public static Color BlueGreen { get; } = new Color(0.05882353f, 0.6078432f, 0.5568628f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.07450981, 0.4941176, 0.427451)
     /// </summary>
-    public static Color BlueGreen1 { get; } = new Color(0.07450981f, 0.4941176f, 0.427451f);
-
-    /// <summary>
-    /// A formatted XKCD survey colour (0.4588235, 0.5529412, 0.6392157)
-    /// </summary>
-    public static Color BlueGrey { get; } = new Color(0.4588235f, 0.5529412f, 0.6392157f);
+    public static Color BlueGreen { get; } = new Color(0.07450981f, 0.4941176f, 0.427451f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.3764706, 0.4862745, 0.5568628)
     /// </summary>
-    public static Color BlueGrey1 { get; } = new Color(0.3764706f, 0.4862745f, 0.5568628f);
-
-    /// <summary>
-    /// A formatted XKCD survey colour (0.3529412, 0.02352941, 0.9372549)
-    /// </summary>
-    public static Color BluePurple { get; } = new Color(0.3529412f, 0.02352941f, 0.9372549f);
+    public static Color BlueGrey { get; } = new Color(0.3764706f, 0.4862745f, 0.5568628f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.3411765, 0.1607843, 0.8078431)
     /// </summary>
-    public static Color BluePurple1 { get; } = new Color(0.3411765f, 0.1607843f, 0.8078431f);
+    public static Color BluePurple { get; } = new Color(0.3411765f, 0.1607843f, 0.8078431f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.3647059, 0.02352941, 0.9137255)
@@ -291,6 +276,21 @@ public static class XKCDColours
     /// A formatted XKCD survey colour (0.3254902, 0.2352941, 0.7764706)
     /// </summary>
     public static Color BlueWithAHintOfPurple { get; } = new Color(0.3254902f, 0.2352941f, 0.7764706f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.05882353, 0.6078432, 0.5568628)
+    /// </summary>
+    public static Color Blue_Green { get; } = new Color(0.05882353f, 0.6078432f, 0.5568628f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.4588235, 0.5529412, 0.6392157)
+    /// </summary>
+    public static Color Blue_Grey { get; } = new Color(0.4588235f, 0.5529412f, 0.6392157f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.3529412, 0.02352941, 0.9372549)
+    /// </summary>
+    public static Color Blue_Purple { get; } = new Color(0.3529412f, 0.02352941f, 0.9372549f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.2745098, 0.254902, 0.5882353)
@@ -1848,14 +1848,9 @@ public static class XKCDColours
     public static Color GreenApple { get; } = new Color(0.3686275f, 0.8627451f, 0.1215686f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.003921569, 0.7529412, 0.5529412)
-    /// </summary>
-    public static Color GreenBlue { get; } = new Color(0.003921569f, 0.7529412f, 0.5529412f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.02352941, 0.7058824, 0.5450981)
     /// </summary>
-    public static Color GreenBlue1 { get; } = new Color(0.02352941f, 0.7058824f, 0.5450981f);
+    public static Color GreenBlue { get; } = new Color(0.02352941f, 0.7058824f, 0.5450981f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.3294118, 0.3058824, 0.01176471)
@@ -1873,14 +1868,19 @@ public static class XKCDColours
     public static Color GreenTeal { get; } = new Color(0.04705882f, 0.7098039f, 0.4666667f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.7098039, 0.8078431, 0.03137255)
-    /// </summary>
-    public static Color GreenYellow { get; } = new Color(0.7098039f, 0.8078431f, 0.03137255f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.7882353, 1, 0.1529412)
     /// </summary>
-    public static Color GreenYellow1 { get; } = new Color(0.7882353f, 1, 0.1529412f);
+    public static Color GreenYellow { get; } = new Color(0.7882353f, 1, 0.1529412f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.003921569, 0.7529412, 0.5529412)
+    /// </summary>
+    public static Color Green_Blue { get; } = new Color(0.003921569f, 0.7529412f, 0.5529412f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.7098039, 0.8078431, 0.03137255)
+    /// </summary>
+    public static Color Green_Yellow { get; } = new Color(0.7098039f, 0.8078431f, 0.03137255f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.1372549, 0.7686275, 0.5450981)
@@ -1963,14 +1963,9 @@ public static class XKCDColours
     public static Color Grey { get; } = new Color(0.572549f, 0.5843138f, 0.5686275f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.3921569, 0.4901961, 0.5568628)
-    /// </summary>
-    public static Color GreyBlue { get; } = new Color(0.3921569f, 0.4901961f, 0.5568628f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.4196078, 0.5450981, 0.6431373)
     /// </summary>
-    public static Color GreyBlue1 { get; } = new Color(0.4196078f, 0.5450981f, 0.6431373f);
+    public static Color GreyBlue { get; } = new Color(0.4196078f, 0.5450981f, 0.6431373f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.4980392, 0.4392157, 0.3254902)
@@ -1978,14 +1973,9 @@ public static class XKCDColours
     public static Color GreyBrown { get; } = new Color(0.4980392f, 0.4392157f, 0.3254902f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.5254902, 0.6313726, 0.4901961)
-    /// </summary>
-    public static Color GreyGreen { get; } = new Color(0.5254902f, 0.6313726f, 0.4901961f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.4705882, 0.6078432, 0.4509804)
     /// </summary>
-    public static Color GreyGreen1 { get; } = new Color(0.4705882f, 0.6078432f, 0.4509804f);
+    public static Color GreyGreen { get; } = new Color(0.4705882f, 0.6078432f, 0.4509804f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.7647059, 0.5647059, 0.6078432)
@@ -2001,6 +1991,16 @@ public static class XKCDColours
     /// A formatted XKCD survey colour (0.3686275, 0.6078432, 0.5411765)
     /// </summary>
     public static Color GreyTeal { get; } = new Color(0.3686275f, 0.6078432f, 0.5411765f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.3921569, 0.4901961, 0.5568628)
+    /// </summary>
+    public static Color Grey_Blue { get; } = new Color(0.3921569f, 0.4901961f, 0.5568628f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.5254902, 0.6313726, 0.4901961)
+    /// </summary>
+    public static Color Grey_Green { get; } = new Color(0.5254902f, 0.6313726f, 0.4901961f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.4666667, 0.6313726, 0.7098039)
@@ -3413,19 +3413,19 @@ public static class XKCDColours
     public static Color Pink { get; } = new Color(1, 0.5058824f, 0.7529412f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.9372549, 0.1137255, 0.9058824)
-    /// </summary>
-    public static Color PinkPurple { get; } = new Color(0.9372549f, 0.1137255f, 0.9058824f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.8588235, 0.2941177, 0.854902)
     /// </summary>
-    public static Color PinkPurple1 { get; } = new Color(0.8588235f, 0.2941177f, 0.854902f);
+    public static Color PinkPurple { get; } = new Color(0.8588235f, 0.2941177f, 0.854902f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.9607843, 0.01960784, 0.3098039)
     /// </summary>
     public static Color PinkRed { get; } = new Color(0.9607843f, 0.01960784f, 0.3098039f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.9372549, 0.1137255, 0.9058824)
+    /// </summary>
+    public static Color Pink_Purple { get; } = new Color(0.9372549f, 0.1137255f, 0.9058824f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.8313726, 0.4156863, 0.4941176)
@@ -3593,14 +3593,9 @@ public static class XKCDColours
     public static Color Purple { get; } = new Color(0.4941176f, 0.1176471f, 0.6117647f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.3647059, 0.1294118, 0.8156863)
-    /// </summary>
-    public static Color PurpleBlue { get; } = new Color(0.3647059f, 0.1294118f, 0.8156863f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.3882353, 0.1764706, 0.9137255)
     /// </summary>
-    public static Color PurpleBlue1 { get; } = new Color(0.3882353f, 0.1764706f, 0.9137255f);
+    public static Color PurpleBlue { get; } = new Color(0.3882353f, 0.1764706f, 0.9137255f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.4039216, 0.227451, 0.2470588)
@@ -3613,19 +3608,24 @@ public static class XKCDColours
     public static Color PurpleGrey { get; } = new Color(0.5254902f, 0.4352941f, 0.5215687f);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.8431373, 0.145098, 0.8705882)
-    /// </summary>
-    public static Color PurplePink { get; } = new Color(0.8431373f, 0.145098f, 0.8705882f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.8784314, 0.2470588, 0.8470588)
     /// </summary>
-    public static Color PurplePink1 { get; } = new Color(0.8784314f, 0.2470588f, 0.8470588f);
+    public static Color PurplePink { get; } = new Color(0.8784314f, 0.2470588f, 0.8470588f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.6, 0.003921569, 0.2784314)
     /// </summary>
     public static Color PurpleRed { get; } = new Color(0.6f, 0.003921569f, 0.2784314f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.3647059, 0.1294118, 0.8156863)
+    /// </summary>
+    public static Color Purple_Blue { get; } = new Color(0.3647059f, 0.1294118f, 0.8156863f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.8431373, 0.145098, 0.8705882)
+    /// </summary>
+    public static Color Purple_Pink { get; } = new Color(0.8431373f, 0.145098f, 0.8705882f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.5960785, 0.3372549, 0.5529412)
@@ -3830,12 +3830,12 @@ public static class XKCDColours
     /// <summary>
     /// A formatted XKCD survey colour (0.427451, 0.9294118, 0.9921569)
     /// </summary>
-    public static Color RobinsEgg { get; } = new Color(0.427451f, 0.9294118f, 0.9921569f);
+    public static Color RobinSEgg { get; } = new Color(0.427451f, 0.9294118f, 0.9921569f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.5960785, 0.9372549, 0.9764706)
     /// </summary>
-    public static Color RobinsEggBlue { get; } = new Color(0.5960785f, 0.9372549f, 0.9764706f);
+    public static Color RobinSEggBlue { get; } = new Color(0.5960785f, 0.9372549f, 0.9764706f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.9960784, 0.5254902, 0.6431373)
@@ -4683,14 +4683,9 @@ public static class XKCDColours
     public static Color YellowBrown { get; } = new Color(0.7176471f, 0.5803922f, 0);
 
     /// <summary>
-    /// A formatted XKCD survey colour (0.7843137, 0.9921569, 0.2392157)
-    /// </summary>
-    public static Color YellowGreen { get; } = new Color(0.7843137f, 0.9921569f, 0.2392157f);
-
-    /// <summary>
     /// A formatted XKCD survey colour (0.7529412, 0.9843137, 0.1764706)
     /// </summary>
-    public static Color YellowGreen1 { get; } = new Color(0.7529412f, 0.9843137f, 0.1764706f);
+    public static Color YellowGreen { get; } = new Color(0.7529412f, 0.9843137f, 0.1764706f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.7960784, 0.6156863, 0.02352941)
@@ -4706,6 +4701,11 @@ public static class XKCDColours
     /// A formatted XKCD survey colour (1, 0.8901961, 0.4313726)
     /// </summary>
     public static Color YellowTan { get; } = new Color(1, 0.8901961f, 0.4313726f);
+
+    /// <summary>
+    /// A formatted XKCD survey colour (0.7843137, 0.9921569, 0.2392157)
+    /// </summary>
+    public static Color Yellow_Green { get; } = new Color(0.7843137f, 0.9921569f, 0.2392157f);
 
     /// <summary>
     /// A formatted XKCD survey colour (0.7333333, 0.9764706, 0.05882353)
@@ -4746,6 +4746,4 @@ public static class XKCDColours
     /// A formatted XKCD survey colour (0.7490196, 0.945098, 0.1568628)
     /// </summary>
     public static Color YellowyGreen { get; } = new Color(0.7490196f, 0.945098f, 0.1568628f);
-
-
 }
