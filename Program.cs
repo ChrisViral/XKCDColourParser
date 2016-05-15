@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using System.IO;
 using System.Linq;
 using static System.Console;
@@ -78,7 +77,6 @@ namespace XKCDColourParser
         private const string path = @"D:\Chris\Desktop\rgb.txt";        //File path
         private const string sPath = @"D:\Chris\Desktop\formatted.txt"; //Save path
         private const bool forCSharp6 = true;
-        private static readonly char[] separators = { ' ' };
         #endregion
 
         #region Main
@@ -89,8 +87,7 @@ namespace XKCDColourParser
             Stopwatch watch = Stopwatch.StartNew();
             string[] lines = File.ReadAllLines(path);
             WriteLine($"Loaded, {lines.Length} lines to parse");
-
-            HashSet<string> names = new HashSet<string>(StringComparer.Ordinal);
+            
             List<Colour> colours = new List<Colour>(lines.Length - 1);
             int i;
             for (i = 0; i < lines.Length; i++)
@@ -98,20 +95,13 @@ namespace XKCDColourParser
                 string line = lines[i].Trim();
                 if (string.IsNullOrEmpty(line) || line[0] == '#') { continue; } //Empty or comment
 
-                string[] components = line.Split('#');
-                if (components.Length != 2) { continue; }                       //Badly formatted
+                string[] splits = line.Split(' ');
+                if (splits.Length != 2) { continue; }                           //Badly formatted
 
-                string color = components[1];
+                string color = splits[1];
                 if (color.Length != 6) { continue; }                            //Badly formatted
 
-                string name = components[0].Replace('/', ' ').Replace("'", string.Empty).TrimEnd();
-                string test = name;
-                char c = '1';
-                while (!names.Add(test))    //Makes sure name is unique
-                {
-                    test = test.Length == name.Length ? test + c : SetLastChar(test, c++);
-                }
-                colours.Add(new Colour(ToCamelCase(test), ToFloat(color, 0), ToFloat(color, 2), ToFloat(color, 4)));
+                colours.Add(new Colour(splits[0], ToFloat(color, 0), ToFloat(color, 2), ToFloat(color, 4)));
             }
 
             watch.Stop();
@@ -130,7 +120,7 @@ namespace XKCDColourParser
                 formatted[i++] =  "/// <summary>";
                 formatted[i++] = $"/// A formatted XKCD survey colour ({colour.r}, {colour.g}, {colour.b})";
                 formatted[i++] =  "/// </summary>";
-                formatted[i++] = $"public static{(forCSharp6 ? string.Empty : " readonly")} Color{colour.name} {(forCSharp6 ? " { get; }" : string.Empty)} = new Color({colour.r}{IsFloat(colour.r)}, {colour.g}{IsFloat(colour.g)}, {colour.b}{IsFloat(colour.b)});";
+                formatted[i++] = $"public static{(forCSharp6 ? string.Empty : " readonly")} Color {colour.name}{(forCSharp6 ? " { get; }" : string.Empty)} = new Color({colour.r}{IsFloat(colour.r)}, {colour.g}{IsFloat(colour.g)}, {colour.b}{IsFloat(colour.b)});";
                 formatted[i++] = string.Empty;
             }
 
@@ -144,37 +134,6 @@ namespace XKCDColourParser
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// Converts a space separated string into CamelCase
-        /// </summary>
-        /// <param name="s">String to convert</param>
-        /// <returns>CamelCase version of <paramref name="s"/></returns>
-        private static string ToCamelCase(string s)
-        {
-            string[] splits = s.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            StringBuilder sb = new StringBuilder(s.Length);
-            foreach (string t in splits)
-            {
-                char[] chars = t.ToLower().ToCharArray();
-                chars[0] = char.ToUpper(chars[0]);
-                sb.Append(chars);
-            }
-            return sb.ToString();
-        }
-
-        /// <summary>
-        /// Sets the last char of the given string to the passed char parameter
-        /// </summary>
-        /// <param name="s">String to edit</param>
-        /// <param name="c">Char to replace by</param>
-        /// <returns>The string with the last char replaced by <paramref name="c"/></returns>
-        private static string SetLastChar(string s, char c)
-        {
-            char[] chars = s.ToCharArray();
-            chars[chars.Length - 1] = c;
-            return new string(chars);
-        }
-
         /// <summary>
         /// Converts a hexadecimal byte number into a 0 to 1 float
         /// </summary>
