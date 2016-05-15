@@ -1,10 +1,5 @@
 # XKCDColourParser
-The aim of this is to parse the original XKCD colour survey [text file](Output/original.txt) to a set of static Unity Color
-properties, for use inside of Unity projects. Formatted versions of it exist in [C#6.0](Output/formatted_c%236.cs) and
-[pre C#6.0](Output/formatted.cs) formats, for Unity projects who do not support C#6.0 syntax yet. The only difference between
-both is the usage of C#6.0 is solely readonly getter properties, and the pre version uses readonly fields. Unlike the
-[other version](http://forum.unity3d.com/threads/xkcd-colors-in-unity.85896/) of this file, this does not calculate and create new colours every single time you call the property, so it's slightly faster. XML comments have also been added with the RGB
-code of each colours within them.
+The aim of this is to parse the original XKCD colour survey [text file](Output/original.txt) to a set of static Unity Color properties, for use inside of Unity projects. Formatted versions of it exist in [C#6.0](Output/formatted_c%236.cs) and [pre C#6.0](Output/formatted.cs) formats, for Unity projects who do not support C#6.0 syntax yet. The only difference between both is the usage of C#6.0 is solely readonly getter properties, and the pre version uses readonly fields. Unlike the [other version](http://forum.unity3d.com/threads/xkcd-colors-in-unity.85896/) of this file, this does not calculate and create new colours every single time you call the property, so it's slightly faster. XML comments have also been added with the RGB code of each colours within them. The original file is simply the .cs file posted by HarvesteR, stripped of all the C# fluff, so it's faster to parse.
 
 ---
 ### License
