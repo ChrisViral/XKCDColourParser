@@ -13,7 +13,7 @@ namespace XKCDColourParser
         /// <summary>
         /// Colour support structure 
         /// </summary>
-        public struct Colour : IComparable<Colour>, IEquatable<Colour>
+        public struct Colour : IComparable<Colour>
         {
             #region Fields
             public readonly string name;    //Name
@@ -44,15 +44,8 @@ namespace XKCDColourParser
             /// Compares two colours, using their string name
             /// </summary>
             /// <param name="other">Colour to compare to</param>
-            /// <returns>1 if this colour comes before, -1 if it comes after, and 0 if they are equal</returns>
+            /// <returns>-1 if this colour comes before, 1 if it comes after, and 0 if they are equal</returns>
             public int CompareTo(Colour other) => string.Compare(this.name, other.name, StringComparison.Ordinal);
-
-            /// <summary>
-            /// Determines if two colours are equal
-            /// </summary>
-            /// <param name="other">Colour to compare to</param>
-            /// <returns>True if both colours are equal</returns>
-            public bool Equals(Colour other) => this.name.Equals(other.name, StringComparison.Ordinal);
             #endregion
 
             #region Static methods
@@ -63,20 +56,12 @@ namespace XKCDColourParser
             /// <returns>The clamped <paramref name="f"/></returns>
             public static float Clamp01(float f) => Max(0, Min(1, f));
             #endregion
-
-            #region Overrides
-            /// <summary>
-            /// Hashing functions of this colour
-            /// </summary>
-            /// <returns>The hashcode of this colour's string name</returns>
-            public override int GetHashCode() => this.name.GetHashCode();
-            #endregion
         }
 
         #region Constants
         private const string path = @"D:\Chris\Desktop\rgb.txt";        //File path
         private const string sPath = @"D:\Chris\Desktop\formatted.txt"; //Save path
-        private const bool forCSharp6 = true;
+        private const bool forCSharp6 = true;                           //Switch to false if for usage in a non C#6.0 environment
         #endregion
 
         #region Main
@@ -88,7 +73,7 @@ namespace XKCDColourParser
             string[] lines = File.ReadAllLines(path);
             WriteLine($"Loaded, {lines.Length} lines to parse");
             
-            List<Colour> colours = new List<Colour>(lines.Length - 1);
+            List<Colour> colours = new List<Colour>(lines.Length);
             int i;
             for (i = 0; i < lines.Length; i++)
             {
