@@ -1,4 +1,5 @@
-﻿CloudyBlue acc2d9
+﻿# Taken from http://forum.unity3d.com/threads/xkcd-colors-in-unity.85896/ (stripped extra text before and after each var)
+CloudyBlue acc2d9
 DarkPastelGreen 56ae57
 Dust b2996e
 ElectricLime a8ff04
