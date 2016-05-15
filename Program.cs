@@ -75,8 +75,9 @@ namespace XKCDColourParser
         }
 
         #region Constants
-        private const string path =  @"D:\Chris\Desktop\rgb.txt";       //File path
+        private const string path = @"D:\Chris\Desktop\rgb.txt";        //File path
         private const string sPath = @"D:\Chris\Desktop\formatted.txt"; //Save path
+        private const bool forCSharp6 = true;
         private static readonly char[] separators = { ' ' };
         #endregion
 
@@ -129,10 +130,10 @@ namespace XKCDColourParser
                 formatted[i++] =  "/// <summary>";
                 formatted[i++] = $"/// A formatted XKCD survey colour ({colour.r}, {colour.g}, {colour.b})";
                 formatted[i++] =  "/// </summary>";
-                formatted[i++] = $"public static Color {colour.name} {{ get; }} = new Color({colour.r}{IsFloat(colour.r)}, {colour.g}{IsFloat(colour.g)}, {colour.b}{IsFloat(colour.b)});";
+                formatted[i++] = $"public static{(forCSharp6 ? string.Empty : " readonly")} Color{colour.name} {(forCSharp6 ? " { get; }" : string.Empty)} = new Color({colour.r}{IsFloat(colour.r)}, {colour.g}{IsFloat(colour.g)}, {colour.b}{IsFloat(colour.b)});";
                 formatted[i++] = string.Empty;
             }
-            
+
             WriteLine("Saving to " + sPath);
             File.WriteAllLines(sPath, formatted);
             watch.Stop();
